@@ -1,0 +1,18 @@
+# Thonny
+.thonny/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Firmware scaricati (grossi e riscaricabili)
+*.uf2
