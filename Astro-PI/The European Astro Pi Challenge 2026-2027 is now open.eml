@@ -1,0 +1,785 @@
+Delivered-To: debortoli.fabrizio@gmail.com
+Received: by 2002:ac8:6d0:0:b0:530:ceb1:4914 with SMTP id j16csp3709261qth;
+        Mon, 14 Sep 2026 07:22:02 -0700 (PDT)
+X-Received: by 2002:a05:6808:f08:b0:4b9:a88b:8895 with SMTP id 5614622812f47-4c7b6272fcfmr2001859b6e.43.1789395722249;
+        Mon, 14 Sep 2026 07:22:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1789395722; cv=none;
+        d=google.com; s=arc-20260327;
+        b=CePYKc0KV2ywOcUuRgqRgXD0TTO0AZtXxiR0wEm3h/2Mev/p8QVEUWcfv7Y2qC7nWp
+         hDYedG2l0CQykCNhH5MtG8yKEWCmVniLDftftFf+lcF8ACtDR1iPAOROcFBM+YohEMsZ
+         3UWuknyb31/OWyL+J4QGl7k1RCfAW1TUb2rio7gbnIiWf7UYoolp0KwcJEsvhYj9A4fs
+         IhnQwjT7Z+plTQXclyyXDWlhspqK1UH9tGNKz05n9A5Fa8Es77vupF97FhEWyTuTejDw
+         0IL5wD1fVDzF15+0FT9PPI1TldwhzKj+LjcAQGwLNMwg+pjk7C9rwFeFjG+ftgosKZSX
+         apTg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=feedback-id:message-id:list-unsubscribe-post:list-unsubscribe
+         :mime-version:list-help:date:subject:to:from:dkim-signature;
+        bh=kXQ/5QeI0Kda07vielFvddAcwgwrm4tJ7zL137fzWDk=;
+        fh=5TCo5/WoAAeL92rx3la25akwI3Mc18U4pY4FuSz0RjE=;
+        b=MZY2ea9aUdwkYMPOFTVS4TPmS/W9SG2ZN+6Y5ohhyLDHbKBg023D5jl/RSWwmtLJEn
+         l6KScVM1N6gqtlrqg8SrhGxWazHwPiFLRp9K2SI+q7z2QhTt3CVls6Dl1wFkYu0zu+7S
+         OFV+8ndwRjuUsHzwe7x/eFcx8aAzeM7xU1XftZsMX90PlqnB9EPOaQ9Ec/8BHxf8PxZe
+         CTUzwrW6JZGyu/N9tsf7dc1U1MVfYTtOGay/6zaHLs3y3DkG2GkrbAXnV4EQFHwY5p7I
+         YyOE5Qkpnk+adeoplu/bCcVO6Mw+DdUmG084bd+2iBkf41BTYl8lSMZyEElvpbo5zXxL
+         rCwQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@astro-pi.org header.s=200608 header.b=T519edzi;
+       spf=pass (google.com: domain of bounce-m3dtobm4qtbutnaazzsrp4fjpm.100224@bounce.s10.mc.pd25.com designates 13.111.111.63 as permitted sender) smtp.mailfrom=bounce-M3DTOBM4QTBUTNAAZZSRP4FJPM.100224@bounce.s10.mc.pd25.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=astro-pi.org
+Return-Path: <bounce-M3DTOBM4QTBUTNAAZZSRP4FJPM.100224@bounce.s10.mc.pd25.com>
+Received: from hb63.mta.exacttarget.com (hb63.mta.exacttarget.com. [13.111.111.63])
+        by mx.google.com with ESMTPS id 5614622812f47-4c3314ba3aasi10283416b6e.82.2026.09.14.07.22.02
+        for <debortoli.fabrizio@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 14 Sep 2026 07:22:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-m3dtobm4qtbutnaazzsrp4fjpm.100224@bounce.s10.mc.pd25.com designates 13.111.111.63 as permitted sender) client-ip=13.111.111.63;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@astro-pi.org header.s=200608 header.b=T519edzi;
+       spf=pass (google.com: domain of bounce-m3dtobm4qtbutnaazzsrp4fjpm.100224@bounce.s10.mc.pd25.com designates 13.111.111.63 as permitted sender) smtp.mailfrom=bounce-M3DTOBM4QTBUTNAAZZSRP4FJPM.100224@bounce.s10.mc.pd25.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=astro-pi.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=astro-pi.org;
+ h=From:To:Subject:Date:List-Help:MIME-Version:List-Unsubscribe:
+ List-Unsubscribe-Post:Message-ID:Content-Type; i=contact@astro-pi.org;
+ bh=kXQ/5QeI0Kda07vielFvddAcwgwrm4tJ7zL137fzWDk=;
+ b=T519edziFFxSqd0/jZoNssaALteMSRqhO84mKwY1EVdGAfCACHKm00WvAAgOt4OePTVGLAK9tqeX
+   WlopuOu+WeUv3tzmITAvEoXQDzj5YOeE62xhdAE2xsNkDXHRrNOlebrQK9eFakmPfFmQHsj4qzmk
+   mnmx+W5cXUV/L3wzT/0=
+Received: by hb63.mta.exacttarget.com id hl01gk39mjc2 for <debortoli.fabrizio@gmail.com>; Mon, 14 Sep 2026 14:22:01 +0000 (envelope-from <bounce-M3DTOBM4QTBUTNAAZZSRP4FJPM.100224@bounce.s10.mc.pd25.com>)
+From: "Astro Pi" <contact@astro-pi.org>
+To: <debortoli.fabrizio@gmail.com>
+Subject: The European Astro Pi Challenge 2026-2027 is now open
+Date: Mon, 14 Sep 2026 08:22:01 -0600
+List-Help: <https://cl.S10.exct.net/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiIxMDAwMzgzNjYiLCJzIjoiMTMzMTkzNzE3MSIsImxpZCI6IjI1Mjg1IiwiaiI6IjYzMDk4IiwiamIiOiI1NTYxNzciLCJkIjoiMTAwMjI0In0.hK8dQbpZvqDPz609gFxQcsJfSsg26NOEuBqsmlgVoeY>
+MIME-Version: 1.0
+x-messageKey: 800983-2754797304-31072842
+X-Delivery: Transactional
+X-SFMC-Stack: 10
+x-job: 100038366_63098
+List-Unsubscribe: <https://www3.raspberrypi.org/listUnsubscribeHeader/u/800983/2ef38e31bb4fe8d345cb7844a6d03fdbadb50a077ba5685e6af7a0179c0cc0d6/2754813312>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Report-Abuse-To: abuse@pd25.com
+Message-ID: <8024c5aa-071d-45d8-9e14-f7fa99bbecb3@dfw1s10mta0013.xt.local>
+Feedback-ID: 100038366:63098:13.111.111.63:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="zFgtz6uisAvM=_?:"
+
+This is a multi-part message in MIME format.
+
+--zFgtz6uisAvM=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Take part in Astro Pi to ignite young people’s interest space and enhance their programming skills
+
+Hi De,
+
+The European Astro Pi Challenge is back for the 2026/27 season, and we’re excited to announce that registration is officially open for both Mission Zero and Mission Space Lab!
+
+Here is everything you need to know about this year’s updates and key dates.
+
+Mission Zero: Art in Orbit 🎨
+
+In Mission Zero [https://www3.raspberrypi.org/e/800983/mission-zero/4w38fb/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA, young people design nature-inspired pixel art to display for astronauts on board the ISS as they go about their daily tasks. They will learn Python fundamentals—like working with variables—and use the Astro Pi's colour sensor to adapt their artwork dynamically.
+
+What’s new for mentors this year:
+
+Fresh Inspiration: Explore new starter code examples selected directly from standout 2025/26 Mission Zero entries.
+
+Worked Examples: Our Mission Zero project guide now includes two worked examples showing students how to code a static image or build an animated sequence.
+
+Updated Mentor Guide: Packed with practical classroom resources, troubleshooting tips, and quick fixes for common errors.
+
+NOTE: You will be given a new classroom code for Mission Zero 2026/27 when you sign in to the Mission Hub. [https://www3.raspberrypi.org/e/800983/login/4w38ff/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA]
+
+Mission Space Lab: Real Space Science 🛰️
+In Mission Space Lab [https://www3.raspberrypi.org/e/800983/mission-space-lab/4w38fj/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA, teams of 2 to 6 young people tackle a real scientific investigation in space. This year, your teams can design their own original space science experiment or follow one of our ready-made project guides to get started.
+
+Students will write a Python program to log sensor or camera data to a file, with every eligible program guaranteed a 10-minute flight slot on the ISS.
+
+Testing &amp; Tools:
+Teams can test their code online using the web-based Astro Pi Replay tool [https://www3.raspberrypi.org/e/800983/-/4w38fm/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA Teams can access using Chrome, Safari, or Firefox to see real historical ISS sensor data, images, and error logs. Offline testing is also available via the Thonny IDE plugin.
+
+ 📅 Key Dates for 2026/27
+
+14 September 2026: Mission Zero and Mission Space Lab launch
+
+1 October 2026, 15:00 (CEST) / 16:00 (BST): Getting started with Mission Space Lab livestream. Join here. 
+
+22 February 2027 (12:00 CET): Mission Space Lab program submissions close
+
+22 March 2027: Mission Zero submissions close
+
+April–May 2027: Approved programs run on board the ISS
+
+June 2027: Teams receive official data sets and certificates
+
+June 2027: Exclusive live Q&amp;A for MSL teams with an ESA human space flight expert.
+
+We can’t wait to see what you and your teams create this year! Head over to astro-pi.org to get started.
+
+Best wishes,
+
+Astro Pi Mission Control
+
+https://www3.raspberrypi.org/e/800983/ESAEducation-/4w38fq/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA
+
+https://www3.raspberrypi.org/e/800983/astro-pi/4w38ft/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA
+
+Astro Pi is an ESA Education project run in collaboration with the Raspberry Pi Foundation.
+
+												Copyright Raspberry Pi Foundation 2026, All rights reserved.
+
+												 
+
+Our mailing address is
+
+Raspberry Pi Foundation, 37 Hills Road, Cambridge, CB2 1NT
+
+Want to change how you receive these emails?
+
+Update your preferences or unsubscribe
+
+https://www3.raspberrypi.org/emailpreferencepage?ehash=2ef38e31bb4fe8d345cb7844a6d03fdbadb50a077ba5685e6af7a0179c0cc0d6&email_id=2754813312&epc_hash=9Ar-pKKYv4NZ8CC_wvx2Wok4YiasL1IxWO14xLgVzrA
+
+Privacy Policy - Raspberry Pi Foundation
+
+https://www3.raspberrypi.org/e/800983/privacy-/4w38fx/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA
+
+Privacy Policy - ESA
+
+https://www3.raspberrypi.org/e/800983/ces-Privacy-notice-ESA-website/4w38g1/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA
+
+
+
+--zFgtz6uisAvM=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!-- HTML 5 tag -->
+<!DOCTYPE html>
+
+<!-- HTML tag and Outlook Office rendering -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Remove links for date, email, phone -->
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="x-apple-disable-message-reformatting" />
+
+  <title></title>
+
+  <!-- Web fonts and hide from Outlook -->
+  <!--[if !mso]><!-->
+  <style>
+    @import url("https://www3.raspberrypi.org/l/800983/2023-01-17/4sn9zg/800983/1673950335JZBm0jAi/Astro_fonts.css");
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+  </style>
+  <!--<![endif]-->
+
+
+  <style type="text/css" media="screen">
+    /* GMAIL specific classes */
+
+    u+.body {
+      min-width: 100vw;
+    }
+
+    div>u~div .title {
+      font-size: 16px !important;
+      line-height: 18px !important;
+      letter-spacing: 0 !important;
+    }
+
+    /* Remove blue links on IOS and SAMSUNG devices */
+    a[x-apple-data-detectors],
+    /* iOS */
+
+    .unstyle-auto-detected-links *,
+    .aBn,
+    #MessageViewBody a
+
+    /* SAMSUNG */
+      {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      /* Allow smoother rendering of resized image in Internet Explorer */
+    }
+
+    /* TYPOGRAPHY */
+
+    p {
+      padding: 0 !important;
+      Margin: 0 0 10px 0 !important;
+    }
+
+    h1 {
+      padding: 0;
+      Margin: 0 0 20px 0;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 0;
+      Margin: 0 0 10px 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 22px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    /* STRUCTURE */
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td,
+    th {
+      mso-line-height-rule: exactly;
+      Margin: 0;
+    }
+
+    /* Button/Link styles */
+
+    a {
+      text-decoration: underline;
+      color: #002b3f;
+      font-weight: 700;
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: none !important;
+      font-weight: 400;
+    }
+
+    a.link:hover, a:hover {
+      text-decoration: none !important;
+    }
+
+    .footer a:hover {
+      text-decoration: underline !important;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Mobile styles */
+
+    @media only screen and (max-device-width: 480px),
+    only screen and (max-width: 480px) {
+
+
+      .mobile-shell {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
+      .mobile-plr-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .mobile-left {
+        text-align: left !important;
+      }
+
+      .mobile-center {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .mobile-right {
+        text-align: right !important;
+      }
+
+      .fluid-img img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: inherit !important;
+      }
+
+      .fluid-img-80 img {
+        width: 80% !important;
+        max-width: 80% !important;
+        height: auto !important;
+        max-height: inherit !important;
+      }
+
+      .logo img {
+        width: 100% !important;
+        max-width: 274px !important;
+        height: auto !important;
+        max-height: inherit !important;
+      }
+
+      .column {
+        float: left !important;
+        width: 100% !important;
+        display: block !important;
+      }
+
+      /* Paddings */
+      .mobile-pt-15 {
+        padding-top: 15px !important;
+      }
+
+      .mobile-pb-5 {
+        padding-bottom: 5px !important;
+      }
+
+      .mobile-pb-10 {
+        padding-bottom: 10px !important;
+      }
+
+      .mobile-pb-20 {
+        padding-bottom: 10px !important;
+      }
+
+      .mobile-plr-20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .mobile-pt-nav {
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+
+      .mobile-pb-nav {
+        padding-top: 5px;
+        padding-bottom: 10px;
+      }
+
+      .mobile-px-20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      /* Hero */
+      .hero {
+        padding-bottom: 10px !important;
+      }
+
+      .w100 {
+        width: 100% !important;
+      }
+
+      .mobile-hide {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+      }
+
+      .mobile-show {
+        display: table-cell !important;
+        height: auto !important;
+        max-height: inherit !important;
+        overflow: visible !important;
+        visibility: visible !important;
+      }
+    }
+
+
+    @media only screen and (max-device-width: 600px),
+    only screen and (max-width: 600px) {
+      .plr-20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+    }
+
+    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+    /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+    /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      u~div .email-container {
+        min-width: 320px !important;
+      }
+    }
+
+    /* iPhone 6, 6S, 7, 8, and X */
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      u~div .email-container {
+        min-width: 375px !important;
+      }
+    }
+
+    /* iPhone 6+, 7+, and 8+ */
+    @media only screen and (min-device-width: 414px) {
+      u~div .email-container {
+        min-width: 414px !important;
+      }
+    }
+  </style>
+
+  <!--[if !mso]><!-->
+  <style type="text/css">
+    #emailContents .preview {
+      display: block !important;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0;
+      background: #ffffff;
+    }
+
+    #emailContents .preview::before {
+      content: 'Preview Text';
+      font-weight: bold;
+      background-color: #002b3f;
+      font-family: Helvetica, sans-serif;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 14px;
+      padding: 0 6px;
+      margin-right: 6px;
+    }
+
+    #emailContents .preview-wrapper {
+      display: block !important;
+    }
+  </style>
+  <!--<![endif]-->
+
+  <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+</head>
+
+<body class="body" style="padding: 0 !important; Margin: 0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#eaeaea; -webkit-text-size-adjust:none;">
+<table bgcolor="#eaeaea" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" style="position: relative;" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" class="mobile-shell" role="Presentation" style="width: 600px;" width="600">
+				<tbody><!-- CONTENT -->
+					<tr>
+						<td align="left" bgcolor="#ffffff" style="font-size: 0pt; line-height: 0pt; font-weight: 400; Margin: 0;">
+						<div class="preview-wrapper" pardot-removable="" style="display:none"><!-- preview text starts -->
+						<div class="preview" pardot-region="preview" style="display:none">Take part in Astro Pi to ignite young people’s interest space and enhance their programming skills</div>
+
+						<div style="display:none">͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏</div>
+						<!-- preview text ends --></div>
+
+						<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+							<tbody><!-- LOGOS -->
+								<tr pardot-repeatable="" style="">
+									<td align="center" style="background: #364f62; padding-top: 15px; padding-bottom: 15px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation">
+										<tbody>
+											<tr>
+												<td style="padding-right: 20px;"><img height="30" pardot-region="" src="https://www3.raspberrypi.org/l/800983/2023-01-17/4snb1y/800983/16744802949sgIW70Q/RPF_Logo_Landscape_White_SCREEN.png" width="100"></td>
+												<td><img height="31" src="https://www3.raspberrypi.org/l/800983/2023-01-17/4sn9zk/800983/1673950343FS8FaViA/esa_logo.png" width="84"></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr pardot-repeatable="" style="">
+									<td align="center" class="fluid-img-80" style="background: #002b3f; padding-top: 15px; padding-bottom: 15px;"><img height="66" pardot-region="" src="https://www3.raspberrypi.org/l/800983/2023-01-17/4sn9z8/800983/1673950311pbJGYO2A/astro_pi_logo.png" width="270"></td>
+								</tr>
+								<!-- END LOGOS --><!-- HERO IMAGE -->
+								<tr pardot-repeatable="" style="">
+									<td>
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+										<tbody>
+											<tr>
+												<td align="center" class="fluid-img" style="font-size: 0pt; line-height: 0pt;"><img alt="" border="0" height="345" pardot-height="345" pardot-region="" pardot-width="600" src="https://www3.raspberrypi.org/l/800983/2023-09-07/4t62g1/800983/1694088283JRZT3Y7z/ISS_in_orbit600_345.png" style="width: 600px; max-width: 600px; height: 345px; max-height: 345px;" width="600"></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<!-- END HERO IMAGE --><!-- MAIN BODY SECTION -->
+								<tr pardot-repeatable="" style="">
+									<td class="mobile-plr-20" style="background-color: #eefafd; padding: 50px 60px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+										<tbody>
+											<tr pardot-repeatable="" style="">
+												<td pardot-region="" style="color: #002b3f; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: left; Margin-bottom: 10px;">
+												<table cellpadding="0" cellspacing="0" width="100%">
+													<tbody>
+														<tr valign="top">
+															<td width="100%">
+															<table cellpadding="0" cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td>
+																		<table cellpadding="0" cellspacing="0" id="contentRegion">
+																			<tbody>
+																				<tr>
+																					<td>
+																					<p>Hi De,</p>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+
+												<p>The European Astro Pi Challenge is back for the 2026/2027 season, and we’re excited to announce that registration is officially open for both Mission Zero and Mission Space Lab!</p>
+
+												<p>Here is everything you need to know about this year’s updates and key dates.</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr pardot-repeatable="" style="">
+									<td class="mobile-plr-20" style="background-color: #ffffff; padding: 50px 60px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+										<tbody>
+											<tr pardot-repeatable="" style="">
+												<td>
+												<h1 pardot-region="" style="font-family: 'Rubik', sans-serif; font-weight: 700; font-size: 40px; line-height: 44px; color: #002b3f; text-align: left; letter-spacing: -1.5px;">Mission Zero: Art in Orbit <span style="font-size:28px;">🎨</span></h1>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td pardot-region="" style="color: #002b3f; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: left; Margin-bottom: 10px;">In <a href="https://www3.raspberrypi.org/e/800983/mission-zero/4w38g4/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" style="color:#002b3f;">Mission Zero</a>, young people design nature-inspired pixel art to display for astronauts on board the ISS as they go about their daily tasks. They will learn Python fundamentals—like working with variables—and use the Astro Pi's colour sensor to adapt their artwork dynamically.<br>
+												<br>
+												What’s new for mentors this year:
+												<ul>
+													<li>Fresh Inspiration: Explore new starter code examples selected directly from standout 2025/2026 Mission Zero entries.</li>
+													<li>Worked Examples: Our Mission Zero project guide now includes two worked examples showing students how to code a static image or build an animated sequence.</li>
+													<li>Updated Mentor Guide: Packed with practical classroom resources, troubleshooting tips, and quick fixes for common errors.</li>
+												</ul>
+												NOTE: You will need a new classroom code for Mission Zero 2026/2027 to take part in this year's challenge. To receive this, simply sign in to the <a href="https://www3.raspberrypi.org/e/800983/login/4w38ff/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" style="color:#002b3f;">Mission Hub.</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr pardot-repeatable="" style="">
+									<td class="mobile-plr-20" style="background-color: #eefafd; padding: 50px 60px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+										<tbody>
+											<tr pardot-repeatable="" style="">
+												<td>
+												<h1 pardot-region="" style="font-family: 'Rubik', sans-serif; font-weight: 700; font-size: 40px; line-height: 44px; color: #002b3f; text-align: left; letter-spacing: -1.5px;">Mission Space Lab: Real Space Science 🛰️</h1>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td pardot-region="" style="color: #002b3f; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: left; Margin-bottom: 10px;">In <a href="https://www3.raspberrypi.org/e/800983/mission-space-lab/4w38g7/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" style="color:#002b3f;"><strong>Mission Space Lab</strong></a>, teams of 2 to 6 young people tackle a real scientific investigation in space. This year, your teams can design their own original space science experiment or follow one of our ready-made project guides to get started.<br>
+												<br>
+												Students will write a Python program to log sensor or camera data to a file, with every eligible program guaranteed a 10-minute flight slot on the ISS.</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr pardot-repeatable="" style="">
+									<td class="mobile-plr-20" style="background-color: #ffffff; padding: 50px 60px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+										<tbody>
+											<tr pardot-repeatable="" style="">
+												<td>
+												<h1 pardot-region="" style="font-family: 'Rubik', sans-serif; font-weight: 700; font-size: 40px; line-height: 44px; color: #002b3f; text-align: left; letter-spacing: -1.5px;">Testing &amp; Tools:</h1>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td pardot-region="" style="color: #002b3f; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: left; Margin-bottom: 10px;">Mission Space Lab teams can test their code online using the web-based <strong><a href="https://www3.raspberrypi.org/e/800983/2026-09-14/4w38gb/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" style="color:#002b3f;">Astro Pi Replay tool</a></strong>. Teams can access using Chrome, Safari, or Firefox to see real historical ISS sensor data, images, and error logs. Offline testing is also available via the Thonny IDE plugin.</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr pardot-repeatable="" style="">
+									<td class="mobile-plr-20" style="background-color: #eefafd; padding: 50px 60px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation" width="100%">
+										<tbody>
+											<tr pardot-repeatable="" style="">
+												<td>
+												<h1 pardot-region="" style="font-family: 'Rubik', sans-serif; font-weight: 700; font-size: 40px; line-height: 44px; color: #002b3f; text-align: left; letter-spacing: -1.5px;">&nbsp;📅 Key Dates for 2026/27</h1>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td pardot-region="" style="color: #002b3f; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: left; Margin-bottom: 10px;">
+												<ul>
+													<li>14 September 2026: Mission Zero and Mission Space Lab launch</li>
+													<li>1 October 2026, 17:00 (CET) / 16:00 (BST): Getting started with Mission Space Lab. <a href="https://www3.raspberrypi.org/e/800983/live-ZcJEgsQXO7g/4w38gf/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA">Join here</a></li>
+													<li>22 February 2027 (12:00 CET): Mission Space Lab program submissions close</li>
+													<li>22 March 2027: Mission Zero submissions close</li>
+													<li>April–May 2027: Approved programs run on board the ISS</li>
+													<li>June 2027: Teams receive official data sets and certificates</li>
+													<li>June 2027: Exclusive live Q&amp;A for MSL teams with an ESA human space flight expert.</li>
+												</ul>
+												We can’t wait to see what you and your teams create this year! Head over to <a href="https://www3.raspberrypi.org/e/800983/2026-09-14/4w38gj/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" style="color:#002b3f;">astro-pi.org</a> to get started.<br>
+												<br>
+												Best wishes,<br>
+												<br>
+												Astro Pi Mission Control</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<!-- END MAIN BODY SECTION --><!-- TWO COLUMNS IMAGE RIGHT BLUE --><!-- END TWO COLUMNS IMAGE RIGHT BLUE --><!-- TWO COLUMNS IMAGE RIGHT PINK --><!-- END TWO COLUMNS IMAGE RIGHT PINK --><!-- TWO COLUMNS IMAGE RIGHT GREEN --><!-- END TWO COLUMNS IMAGE RIGHT GREEN --><!-- TWO COLUMNS IMAGE LEFT BLUE --><!-- END TWO COLUMNS IMAGE LEFT BLUE --><!-- TWO COLUMNS IMAGE LEFT PINK --><!-- END TWO COLUMNS IMAGE LEFT PINK --><!-- TWO COLUMNS IMAGE LEFT GREEN --><!-- END TWO COLUMNS IMAGE LEFT GREEN --><!-- SECTION HEADER --><!-- END SECTION HEADER --><!-- TWO COLUMNS EVEN BLUE --><!-- END TWO COLUMN EVEN BLUE --><!-- TWO COLUMNS EVEN PINK --><!-- END TWO COLUMN EVEN PINK --><!-- TWO COLUMNS EVEN GREEN --><!-- END TWO COLUMN EVEN GREEN --><!-- SECTION NEWS HEADER --><!-- END SECTION NEWS HEADER --><!-- TWO COLUMNS IMAGE RIGHT NEWS --><!-- END TWO COLUMNS IMAGE RIGHT NEWS --><!-- SECTION HOW
+TO TAKE PART HEADER --><!-- END SECTION HOW TO TAKE PART HEADER --><!-- HOW TO TAKE PART --><!-- END HOW TO TAKE PART --><!-- SECTION HOW TO TAKE PART HEADER --><!-- END SECTION HOW TO TAKE PART HEADER --><!-- HOW TO TAKE PART --><!-- END HOW TO TAKE PART --><!-- CTA NARROW BUTTON BLUE --><!-- END CTA NARROW BUTTON BLUE --><!-- CTA NARROW BUTTON PINK --><!-- END CTA NARROW BUTTON PINK --><!-- CTA NARROW BUTTON GREEN --><!-- END CTA NARROW BUTTON GREEN --><!-- CTA FULL WIDTH BUTTON BLUE --><!-- END CTA FULL WIDTH BUTTON BLUE --><!-- CTA FULL WIDTH BUTTON PINK --><!-- END CTA FULL WIDTH BUTTON PINK --><!-- CTA FULL WIDTH BUTTON GREEN --><!-- END CTA FULL WIDTH BUTTON GREEN --><!-- SOCIAL ICONS -->
+								<tr pardot-repeatable="" style="">
+									<td style="background: #1a4053;">
+									<table align="center" border="0" cellpadding="0" cellspacing="0" role="Presentation">
+										<tbody>
+											<tr>
+												<td style="padding-top: 30px; padding-bottom: 30px;">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" role="Presentation">
+													<tbody>
+														<tr>
+															<td pardot-removable="" style="padding-right: 10px;"><a href="https://www3.raspberrypi.org/e/800983/ESAEducation-/4w38fq/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" target="_blank"><img alt="Instagram" border="0" pardot-region="" src="https://www3.raspberrypi.org/l/800983/2023-01-05/4plfmn/800983/167291480920UPPJee/CP_Social_Icon_Facebook_WHITE.png" width="44"></a></td>
+															<td pardot-removable="" style="padding-right: 10px;"><a href="https://www3.raspberrypi.org/e/800983/astro-pi/4w38ft/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" target="_blank"><img alt="Instagram" border="0" height="44" pardot-height="44" pardot-region="" pardot-width="44" src="https://www3.raspberrypi.org/l/800983/2023-10-11/4t88yx/800983/16970190338IAMak3y/x_logo_white_test.png" style="width: 44px; max-width: 44px; height: 44px; max-height: 44px;" width="44"></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<!-- END SOCIAL ICONS --><!-- FOOTER -->
+								<tr pardot-repeatable="" style="">
+									<td align="center" class="footer mobile-plr-20" style="background: #002b3f; padding: 30px 60px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="Presentation">
+										<tbody>
+											<tr pardot-repeatable="" style="">
+												<td align="center" style="padding-bottom: 20px;">
+												<table border="0" cellpadding="0" cellspacing="0" role="Presentation">
+													<tbody>
+														<tr>
+															<td style="padding-right: 20px;"><img height="30" pardot-region="" src="https://www3.raspberrypi.org/l/800983/2023-01-17/4snb1y/800983/16744802949sgIW70Q/RPF_Logo_Landscape_White_SCREEN.png" width="100"></td>
+															<td><img height="31" pardot-region="" src="https://www3.raspberrypi.org/l/800983/2023-01-17/4sn9zk/800983/1673950343FS8FaViA/esa_logo.png" width="84"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td>
+												<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 10px;">Astro Pi is an ESA Education project run in collaboration with the Raspberry Pi Foundation.<br>
+												<br>
+												Copyright Raspberry Pi Foundation&nbsp;2026, All rights reserved.<br>
+												&nbsp;</p>
+
+												<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 0!important;">Our mailing address is</p>
+
+												<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 300; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 10px;">Raspberry Pi Foundation, 37 Hills Road, Cambridge, CB2 1NT</p>
+
+												<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 400; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 10px;"><strong>Want to change how you receive these emails?</strong></p>
+
+												<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 300; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 10px;"><a href="https://www3.raspberrypi.org/emailpreferencepage?ehash=2ef38e31bb4fe8d345cb7844a6d03fdbadb50a077ba5685e6af7a0179c0cc0d6&email_id=2754813312&epc_hash=9Ar-pKKYv4NZ8CC_wvx2Wok4YiasL1IxWO14xLgVzrA" rel="nofollow,noreferrer" style="text-decoration:underline;">Update your preferences or unsubscribe</a></p>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td align="center">
+												<table border="0" cellpadding="0" cellspacing="0" role="Presentation">
+													<tbody>
+														<tr>
+															<td>
+															<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 300; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 10px;"><a href="https://www3.raspberrypi.org/e/800983/privacy-/4w38fx/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" rel="nofollow,noreferrer">Privacy Policy - Raspberry Pi Foundation</a></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr pardot-repeatable="" style="">
+												<td align="center">
+												<table border="0" cellpadding="0" cellspacing="0" role="Presentation">
+													<tbody>
+														<tr>
+															<td>
+															<p pardot-region="" style="color: #ffffff; font-family: 'Rubik', sans-serif; font-weight: 300; font-size: 15px; line-height: 18px; text-align: center; Margin-bottom: 10px;"><a href="https://www3.raspberrypi.org/e/800983/ces-Privacy-notice-ESA-website/4w38g1/2754813312/h/n1Jf5ypOtVnq5004D2I4W7p6fHgUk_YUadvK1lr49uA" rel="nofollow,noreferrer">Privacy Policy - ESA</a></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<!-- END FOOTER -->
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<!-- END CONTENT -->
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<img alt="" src="https://www3.raspberrypi.org/r/800983/1/2754813312/open/1" /><style data-ignore-inlining> 
+@media (prefers-color-scheme: dark) { #_t::before {content:url('https://26hbe879.emltrk.com/v2/26hbe879?rd&d=[UNIQUE]');}} 
+@media (prefers-color-scheme: light) { #_t::before {content:url('https://26hbe879.emltrk.com/v2/26hbe879?rl&d=[UNIQUE]');}} 
+@media print{ #_t {background-image:url('https://26hbe879.emltrk.com/v2/26hbe879?p&d=[UNIQUE]');}} 
+div.OutlookMessageHeader {background-image:url('https://26hbe879.emltrk.com/v2/26hbe879?f&d=[UNIQUE]')} 
+table.moz-email-headers-table {background-image:url('https://26hbe879.emltrk.com/v2/26hbe879?f&d=[UNIQUE]')} 
+blockquote #_t {background-image:url('https://26hbe879.emltrk.com/v2/26hbe879?f&d=[UNIQUE]')} 
+#MailContainerBody #_t {background-image:url('https://26hbe879.emltrk.com/v2/26hbe879?f&d=[UNIQUE]')} 
+</style><div id="_t"></div>
+<img src="https://26hbe879.emltrk.com/v2/26hbe879?d=[UNIQUE]" width="1" height="1" border="0" alt="" /></body>
+
+</html>
+
+
+--zFgtz6uisAvM=_?:--
+
